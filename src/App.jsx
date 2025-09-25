@@ -3,7 +3,7 @@ import { Routes, Route, Link, NavLink, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import { Cog, BarChart3, ShieldCheck, Target, Facebook, Twitter, Linkedin } from "lucide-react"
 
-
+// ------------------ Logo ------------------
 function Logo() {
   return (
     <div className="flex items-center gap-3">
@@ -30,7 +30,7 @@ function Logo() {
   )
 }
 
-
+// ------------------ Header ------------------
 function Header() {
   return (
     <header className="w-full sticky top-0 z-40 bg-white/70 backdrop-blur-md border-b border-slate-100 shadow-sm">
@@ -65,7 +65,7 @@ function Header() {
   )
 }
 
-
+// ------------------ Mobile Menu ------------------
 function MobileMenu() {
   const [open, setOpen] = React.useState(false)
   return (
@@ -106,7 +106,7 @@ function MobileMenu() {
   )
 }
 
-
+// ------------------ Hero ------------------
 function Hero() {
   return (
     <section className="relative bg-gradient-to-br from-indigo-50 to-cyan-50">
@@ -145,56 +145,32 @@ function Hero() {
         <motion.div
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.15 }}
           className="relative w-full h-72 md:h-96 rounded-2xl border border-slate-100 shadow-lg flex items-center justify-center bg-white">
-     
+          {/* Illustration Placeholder */}
           <svg
-  className="w-64 h-64 opacity-90"
-  viewBox="0 0 400 400"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <defs>
-    <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stopColor="#6366f1" /> 
-      <stop offset="100%" stopColor="#06b6d4" /> 
-    </linearGradient>
-  </defs>
-
-
-  <circle cx="200" cy="200" r="180" fill="url(#gradient)" opacity="0.15" />
-
- 
-  <rect
-    x="100"
-    y="100"
-    width="80"
-    height="80"
-    rx="16"
-    fill="url(#gradient)"
-    opacity="0.7"
-  />
-  <circle cx="260" cy="160" r="40" fill="url(#gradient)" opacity="0.5" />
-  <rect
-    x="160"
-    y="220"
-    width="120"
-    height="60"
-    rx="12"
-    fill="url(#gradient)"
-    opacity="0.8"
-  />
-
-  <line x1="60" y1="300" x2="340" y2="300" stroke="url(#gradient)" strokeWidth="2" opacity="0.4" />
-  <line x1="200" y1="60" x2="200" y2="340" stroke="url(#gradient)" strokeWidth="2" opacity="0.2" />
-</svg>
-
+            className="w-44 h-44 opacity-90"
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0%" stopColor="#6366f1" />
+                <stop offset="100%" stopColor="#06b6d4" />
+              </linearGradient>
+            </defs>
+            <rect x="10" y="10" width="180" height="180" rx="20" fill="url(#g1)" opacity="0.18" />
+            <g fill="#0f172a" opacity="0.85">
+              <circle cx="80" cy="86" r="10" />
+              <rect x="98" y="60" width="50" height="50" rx="8" />
+            </g>
+          </svg>
         </motion.div>
       </div>
     </section>
   )
 }
 
-
+// ------------------ Feature Card ------------------
 function FeatureCard({ icon, title, desc }) {
   return (
     <motion.div
@@ -213,7 +189,7 @@ function FeatureCard({ icon, title, desc }) {
   )
 }
 
-
+// ------------------ Features ------------------
 function Features() {
   const items = [
     {
@@ -254,7 +230,7 @@ function Features() {
   )
 }
 
-
+// ------------------ Mid CTA ------------------
 function MidCTA() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-16">
@@ -280,7 +256,7 @@ function MidCTA() {
   )
 }
 
-
+// ------------------ Footer ------------------
 function Footer() {
   return (
     <footer className="bg-white border-t mt-12">
@@ -308,7 +284,7 @@ function Footer() {
   )
 }
 
-
+// ------------------ SimplePage ------------------
 function SimplePage({ title, children }) {
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">
@@ -318,7 +294,7 @@ function SimplePage({ title, children }) {
   )
 }
 
-
+// ------------------ App ------------------
 export default function App() {
   const location = useLocation()
   return (
@@ -379,7 +355,7 @@ export default function App() {
   )
 }
 
-
+// ------------------ Home ------------------
 function Home() {
   return (
     <div>
